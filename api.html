@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*const person = {name: "Emmanuel", age: 21, sex: "M"};
+
+        console.log(person.name);*/
+
+        const students = [{name: "Gamba", sex: "M", age: 24},
+                          {name: "Nespy", sex: "M", age: 22},
+                          {name: "Simi", sex: "M", age: 23},
+                          {name: "JayOPe", sex: "M", age: 27},
+                          {name: "senator Mark", sex: "M", age: 26},
+                          {name: "Love", sex: "F", age: 29},
+                          {name: "Precio", sex: "M", age: 100}];
+
+        
+        //displaying students name
+            /*students.forEach(student => {
+                console.log(student.name);
+                
+            });*/
+        
+        //displaying students name whose sex is female(F)
+            /*students.map(student => {
+                if (student.sex === "F") {
+                    console.log(student.name);
+                    
+                }
+            })*/
+                
+                //console.log(students[0].name, students[0].age);
+
+
+
+                
+        //1. display first 4
+            /*for (let i = 0; i < 4; i++) {
+                console.log(students[i]);
+                }*/
+
+        //2. display name of oldest
+            /*const Old = students.reduce((max, students) =>
+                                        students.age > max.age ?
+                                        students : max); 
+            console.log(Old.name);*/
+        
+        //3. display youngest
+         /*const Yung = students.reduce((max, students) =>
+                                        students.age < max.age ?
+                                        students : max); 
+            console.log(yung.name);*/
+            const yung = students.reduce((prev, students) =>{
+                if (students.age < prev.age) {
+                    return students;
+                }
+                else{
+                    return prev;
+                }
+
+            });
+            console.log(yung.name);
+                                        
+            
+        //4.  add new student dynamically at end (brown, male, 25)
+            /*students.push(
+                {name: "Brown", sex: "M",age: 25}
+            )
+            console.log(students);*/
+
+    </script>
+</body>
+</html>
