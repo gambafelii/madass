@@ -9,6 +9,7 @@
             box-sizing: border-box;
             background-color: black;
         }
+
         .container{
             background-color: rgb(32, 29, 24);
             width: 25%;
@@ -17,6 +18,7 @@
             overflow: hidden;
             
         }
+        
         .buttons{
             display: grid;
             grid-template-columns: 50px 50px 50px 50px;
@@ -26,6 +28,7 @@
             width: auto;
             margin-left: -15px;
         }
+
         input{
             background-color: rgb(185, 178, 166);
             width: 100%;
@@ -34,8 +37,8 @@
             font-size: 2.5rem;
             color: rgb(99, 34, 34);
             text-align: right;
-            
         }
+
         button{
             width: 70px;
             height: 70px;
@@ -47,6 +50,11 @@
             text-align: center;
         }
 
+        button:hover{
+            background-color: rgb(3, 22, 41);
+            color: white;
+        }
+
         #dot{
             grid-column: 3;
         }
@@ -56,17 +64,12 @@
             grid-row: 5;
             grid-column: 4;
         }
+
         #equalsign:hover{
             background-color: rgb(79, 112, 153);
         }
-        button:hover{
-            background-color: rgb(3, 22, 41);
-            color: white;
-        }
+        
 
-
-
-            
         @media (max-width: 1024px){
             .container{
                 width: 32%;
@@ -110,7 +113,6 @@
             }
         }
 
-        
         @media (max-width: 434px){
             .container{
                 width: 100%;
@@ -136,7 +138,6 @@
     <div class="container">
         <input id="display" readonly>
         <div class="buttons">
-            
             <button class="btn" onclick="show('1')">1</button>
             <button class="btn" onclick="show('2')">2</button>
             <button class="btn" onclick="show('3')">3</button>
